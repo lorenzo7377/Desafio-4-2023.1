@@ -1,0 +1,11 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "Este desafio tem como objetivo a implementação de uma plataforma web utilizando a biblioteca React JS. Você deve criar um quadro de tarefas (Kanban) que permita a criação de tarefas, a definição de um responsável, um prazo e a coluna que a tarefa se encontra. O quadro deve ser dividido em 3 colunas: \"A fazer\", \"Em andamento\" e \"Concluído\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
