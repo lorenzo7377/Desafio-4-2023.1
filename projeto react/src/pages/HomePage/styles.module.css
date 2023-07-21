@@ -1,3 +1,64 @@
-.grey {
+#box {
+  position: relative;
   background-color: #3a3a3a;
+  width: 90vw;
+  height: 90vh;
+  margin-top: 5vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#caixa {
+  position: relative;
+  background-color: #3a3a3a;
+  width: 90%;
+  height: 80%;
+  border: 18px solid #969696;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#primeirobotao {
+  width: 23%;
+  height: 5.5%;
+  border-radius: 15px;
+  background-color: rgb(34, 34, 52);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+#segundobotao {
+  width: 23%;
+  height: 5.5%;
+  border-radius: 15px;
+  background-color: rgb(34, 34, 52);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-left: 15%;
+}
+
+#terceirobotao {
+  width: 23%;
+  height: 5.5%;
+  border-radius: 15px;
+  background-color: rgb(34, 34, 52);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-left: 15%;
+}
+
+#fazer {
+  z-index: 2;
+  margin-top: -25%;
 }
