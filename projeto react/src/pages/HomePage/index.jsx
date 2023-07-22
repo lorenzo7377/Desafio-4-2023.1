@@ -2,16 +2,13 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 
 export default function HomePage() {
-  const [Tarefa, setTarefa] = useState({
-    nome: "",
-    prazo: "",
-    descricao: "",
-    responsavel: "",
+  const [tarefas, setTarefas] = useState({
+    aFazer: [],
+    emAndamento: [],
+    feito: [],
   });
 
-  const [tarefasList, setTarefasList] = useState([]);
-
-  function entradas() {
+  function entradas(lista) {
     const novaTarefa = {
       nome: prompt("Digite o nome da tarefa:"),
       prazo: prompt("Digite o prazo da tarefa:"),
@@ -19,15 +16,13 @@ export default function HomePage() {
       responsavel: prompt("Digite o nome do responsável da tarefa:"),
     };
 
-    setTarefa(novaTarefa);
-
     if (
       novaTarefa.nome &&
       novaTarefa.prazo &&
       novaTarefa.descricao &&
       novaTarefa.responsavel
     ) {
-      setTarefasList([...tarefasList, novaTarefa]);
+      setTarefas({ ...tarefas, [lista]: [...tarefas[lista], novaTarefa] });
     }
   }
 
@@ -36,40 +31,54 @@ export default function HomePage() {
       <div id={styles.caixa}>
         <div id={styles.lista1}>
           <h1>A fazer</h1>
-          <p>
-            <br />
-          </p>
-
-          <div>
-            <ul>
-              {tarefasList.map((tarefa, index) => (
-                <li className={styles.elementos} key={index}>
-                  <h2>{tarefa.nome}</h2>
-                  <p>{tarefa.prazo}</p>
-                  <p>{tarefa.descricao}</p>
-                  <p>{tarefa.responsavel}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <button id={styles.primeirobotao} onClick={entradas}>
+          <ul>
+            {tarefas.aFazer.map((tarefa, index) => (
+              <li id={styles.elementos1} key={index}>
+                <h2>{tarefa.nome}</h2>
+                <p>{tarefa.prazo}</p>
+                <p>{tarefa.descricao}</p>
+                <p>{tarefa.responsavel}</p>
+              </li>
+            ))}
+          </ul>
+          <button id={styles.primeirobotao} onClick={() => entradas("aFazer")}>
             +
           </button>
         </div>
         <div id={styles.lista2}>
           <h1>Em andamento</h1>
-          <p>
-            <br />
-          </p>
-          <button id={styles.segundobotao}>+</button>
+          <ul>
+            {tarefas.emAndamento.map((tarefa, index) => (
+              <li id={styles.elementos2} key={index}>
+                <h2>{tarefa.nome}</h2>
+                <p>{tarefa.prazo}</p>
+                <p>{tarefa.descricao}</p>
+                <p>{tarefa.responsavel}</p>
+              </li>
+            ))}
+          </ul>
+          <button
+            id={styles.segundobotao}
+            onClick={() => entradas("emAndamento")}
+          >
+            +
+          </button>
         </div>
         <div id={styles.lista3}>
           <h1>Feito</h1>
-          <p>
-            <br />
-          </p>
-          <button id={styles.terceirobotao}>+</button>
+          <ul>
+            {tarefas.feito.map((tarefa, index) => (
+              <li id={styles.elementos3} key={index}>
+                <h2>{tarefa.nome}</h2>
+                <p>{tarefa.prazo}</p>
+                <p>{tarefa.descricao}</p>
+                <p>{tarefa.responsavel}</p>
+              </li>
+            ))}
+          </ul>
+          <button id={styles.terceirobotao} onClick={() => entradas("feito")}>
+            +
+          </button>
         </div>
       </div>
     </div>

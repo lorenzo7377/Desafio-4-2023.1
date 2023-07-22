@@ -79,9 +79,9 @@
   height: 100%;
 }
 
-.elementos {
+#elementos1 {
   width: 20vw;
-  height: 10vw;
+  min-height: 10vw;
   background-color: #846351;
   list-style-type: none;
   margin-left: 3%;
@@ -89,4 +89,31 @@
   display: block;
   text-align: center;
   margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+#elementos2 {
+  width: 20vw;
+  min-height: 10vw;
+  background-color: #46556c;
+  list-style-type: none;
+  margin-left: 3%;
+  border-radius: 15px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+#elementos3 {
+  width: 20vw;
+  min-height: 10vw;
+  background-color: #466c6c;
+  list-style-type: none;
+  margin-left: 3%;
+  border-radius: 15px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  word-wrap: break-word;
 }
