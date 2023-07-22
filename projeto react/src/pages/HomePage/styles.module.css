@@ -21,9 +21,10 @@
 }
 
 #primeirobotao {
-  width: 23%;
+  width: 50%;
   height: 5.5%;
   border-radius: 15px;
+  margin-left: 25%;
   background-color: rgb(34, 34, 52);
   cursor: pointer;
   text-decoration: none;
@@ -33,7 +34,7 @@
 }
 
 #segundobotao {
-  width: 23%;
+  width: 50%;
   height: 5.5%;
   border-radius: 15px;
   background-color: rgb(34, 34, 52);
@@ -42,11 +43,11 @@
   font-size: 18px;
   font-weight: bold;
   color: white;
-  margin-left: 15%;
+  margin-left: 25%;
 }
 
 #terceirobotao {
-  width: 23%;
+  width: 50%;
   height: 5.5%;
   border-radius: 15px;
   background-color: rgb(34, 34, 52);
@@ -55,10 +56,37 @@
   font-size: 18px;
   font-weight: bold;
   color: white;
-  margin-left: 15%;
+  margin-left: 28%;
 }
 
-#fazer {
-  z-index: 2;
-  margin-top: -25%;
+#lista1 {
+  background-color: transparent;
+  width: 33.33%;
+  height: 100%;
+  border-right: 7px solid #969696;
+}
+
+#lista2 {
+  background-color: transparent;
+  width: 33.34%;
+  height: 100%;
+  border-right: 7px solid #969696;
+}
+
+#lista3 {
+  background-color: transparent;
+  width: 33.33%;
+  height: 100%;
+}
+
+.elementos {
+  width: 20vw;
+  height: 10vw;
+  background-color: #846351;
+  list-style-type: none;
+  margin-left: 3%;
+  border-radius: 15px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
 }
